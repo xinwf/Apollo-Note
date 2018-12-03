@@ -1,6 +1,6 @@
 # Apollo 2.0/2.5 预测模块代码层次结构说明
 
-本文档将从代码层面讲解Apollo Prediction预测模块的工作，其实对比Preception模块与Prediction模块，后者更像是前者的一个子节点，换句话说：Prediction模块就只有一个线程工作。这个线程主要的任务就是接受Preception模块FusionSubnode发布的融合数据，其中包含了障碍物的位置、方向、尺寸、类别、速度与加速度等等信息，来预测障碍物未来时刻的运动轨迹。
+本文档将从代码层面讲解Apollo Prediction预测模块的工作，其实对比Perception模块与Prediction模块，后者更像是前者的一个子节点，换句话说：Prediction模块就只有一个线程工作。这个线程主要的任务就是接受Perception模块FusionSubnode发布的融合数据，其中包含了障碍物的位置、方向、尺寸、类别、速度与加速度等等信息，来预测障碍物未来时刻的运动轨迹。
 
 我们先从`Prediction::Init`函数了解一下这个模块的输入输出，以及用到的管理器等信息，
 
